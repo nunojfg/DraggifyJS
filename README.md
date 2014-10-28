@@ -16,4 +16,4 @@ Add this to your view:
 <!-- here you can use a progress bar -->
 <div class="dropzoneProgress">Files Still not Uploaded</div>
 `````
-You can use whatever backend controller you like with this frontend code, I will provide a PHP example later on.
+You can use whatever backend controller you like with this frontend code.
