@@ -26,9 +26,9 @@ $(document).ready(function($) {
 		}
 		
 		var update_element	= $('.dropzoneUpdateElement');
-		var url				= $('.dropzoneSubmitUrl').text();
-		var data			= new FormData();
-		var file			= e.originalEvent.dataTransfer.files[0]; //Single file selection
+		var url			= $('.dropzoneSubmitUrl').text();
+		var data		= new FormData();
+		var file		= e.originalEvent.dataTransfer.files[0]; //Single file selection
 		data.append('file', file);
 		
 		// Sends file in ajax in multipart form, using FormData API
