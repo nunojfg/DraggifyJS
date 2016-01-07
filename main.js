@@ -11,17 +11,21 @@ $(document).ready(function($) {
 	// Send drag and drop file
 	function sendDragAndDropFile(e)
 	{
+		
+
 		if ( ! (e.originalEvent.dataTransfer && e.originalEvent.dataTransfer.files.length))
 			return false;
 		
 		e.preventDefault();
 		e.stopPropagation();
+
+
 		
 		// Detect single file selection
 		if (e.originalEvent.dataTransfer.files.length > 1)
 		{
 			// Here add your javascript framework message
-			alert('Please drag and drop only one attachment at a time');
+			$(".dropzoneProgress").text('Please drag and drop only one attachment at a time');
 			return false;
 		}
 		
@@ -46,8 +50,12 @@ $(document).ready(function($) {
 					//Since this is a demo we are using alert to simplify the output
 					//when you have a good understanding please use the update_element and
 					//replace its html - ex: update_element.replaceWith(result.output);
-					alert('File uploaded');
+					$(".dropzoneProgress").text('File uploaded');
 				}
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown) 
+			{
+				$(".dropzoneProgress").text('File not uploaded');
 			}
 		});
 		
