@@ -17,3 +17,7 @@ Add this to your view:
 <div class="dropzoneProgress">Files Still not Uploaded</div>
 `````
 You can use whatever backend controller you like with this frontend code.
+
+Update 
+====================
+Now you can test the code running main.html in your web browser ;)
